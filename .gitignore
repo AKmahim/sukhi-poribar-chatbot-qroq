@@ -1,0 +1,6 @@
+env
+.env
+
+*.zip
+config.json
+note.txt
