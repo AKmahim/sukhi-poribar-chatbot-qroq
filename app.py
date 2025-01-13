@@ -130,7 +130,7 @@ if user_prompt:
     # Get response from LLM
     try:
         response = client.chat.completions.create(
-            model="gemma2-9b-it",
+            model="llama3-8b-8192",
             messages=messages,
             temperature=0.7,
             max_tokens=700
