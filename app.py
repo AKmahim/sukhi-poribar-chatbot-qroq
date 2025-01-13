@@ -95,7 +95,7 @@ def create_system_prompt(query: str) -> str:
     {relevant_content}
 
     Guidelines:
-    1. Answer based solely on the provided FAQ content
+    1. Answer based solely on the provided Book content
     2. If the information isn't in the provided sections, say so
     3. Respond in the same language as the user's question (Bengali or English)
     4. Keep responses clear and concise
@@ -130,7 +130,7 @@ if user_prompt:
     # Get response from LLM
     try:
         response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model="gemma2-9b-it",
             messages=messages,
             temperature=0.7,
             max_tokens=700
