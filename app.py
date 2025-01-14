@@ -10,7 +10,7 @@ load_dotenv()
 
 # Streamlit page configuration
 st.set_page_config(
-    page_title="Sukhi-Poribar - llama3-8b-8192 ",
+    page_title="Sukhi-Poribar - llama3-8b-8192 -FAQ ",
     page_icon="📚",
     layout="centered"
 )
@@ -69,7 +69,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 @st.cache_resource
 def load_and_chunk_faq():
     try:
-        with open(r"book.txt", encoding='utf-8') as file:
+        with open(r"FAQ.txt", encoding='utf-8') as file:
             content = file.read()
         return chunk_text(content)
     except FileNotFoundError:
@@ -102,7 +102,7 @@ def create_system_prompt(query: str) -> str:
     5. Stay focused on the specific question asked"""
 
 # UI Elements
-#st.title("সুখী পরিবার Chatbot")
+# st.title("সুখী পরিবার Chatbot")
 #st.markdown("আপনার প্রশ্ন জিজ্ঞাসা করুন। You can ask questions in Bengali or English.")
 
 # Display chat history
