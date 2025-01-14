@@ -10,7 +10,7 @@ load_dotenv()
 
 # Streamlit page configuration
 st.set_page_config(
-    page_title="Sukhi-Poribar",
+    page_title="Sukhi-Poribar - llama3-8b-8192 ",
     page_icon="📚",
     layout="centered"
 )
