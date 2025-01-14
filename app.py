@@ -10,7 +10,7 @@ load_dotenv()
 
 # Streamlit page configuration
 st.set_page_config(
-    page_title="Sukhi-Poribar - llama-3.1-8b-instant -FAQ ",
+    page_title="Sukhi-Poribar - llama3-70b-8192 - book ",
     page_icon="📚",
     layout="centered"
 )
@@ -130,7 +130,7 @@ if user_prompt:
     # Get response from LLM
     try:
         response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model="llama3-70b-8192",
             messages=messages,
             temperature=0.7,
             max_tokens=700
@@ -149,3 +149,4 @@ if user_prompt:
 
 # model list
 # llama3-8b-8192
+# llama-3.1-8b-instant
