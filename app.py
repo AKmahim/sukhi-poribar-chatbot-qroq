@@ -10,7 +10,7 @@ load_dotenv()
 
 # Streamlit page configuration
 st.set_page_config(
-    page_title="Sukhi-Poribar - llama3-8b-8192 -FAQ ",
+    page_title="Sukhi-Poribar - llama-3.1-8b-instant -FAQ ",
     page_icon="📚",
     layout="centered"
 )
@@ -130,7 +130,7 @@ if user_prompt:
     # Get response from LLM
     try:
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=messages,
             temperature=0.7,
             max_tokens=700
@@ -145,3 +145,7 @@ if user_prompt:
 
     except Exception as e:
         st.error(f"An error occurred: {str(e)}")
+
+
+# model list
+# llama3-8b-8192
